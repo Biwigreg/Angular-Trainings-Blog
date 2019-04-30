@@ -1,0 +1,10 @@
+<li [ngClass]="{'list-group-item': true, 'list-group-item-success': Post.Score > 0, 'list-group-item-danger': Post.Score < 0}">
+    <div><span class="title">{{Post.Title}}</span>
+    <span class="createdad">{{Post.CreatedAt | date:'short'}}</span>    
+    </div>
+    <p>{{Post.Content}}</p>
+    <button class="btn btn-success"  (click)="onLike()">Love It!</button><button class="btn btn-danger" (click)="onDislike()">Don't love It!</button> Score : {{Post.Score }}  
+    <button class="btn btn-default pull-right" (click)="onDelete()">
+      <span class="glyphicon glyphicon-minus"></span>
+    </button> 
+</li>

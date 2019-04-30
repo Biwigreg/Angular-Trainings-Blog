@@ -1,0 +1,8 @@
+<div>
+  <span class="postcollection">Posts</span>
+  <ul class="list-group">
+      <app-post *ngFor="let p of getPosts()"
+      [Post]="p"></app-post>
+  </ul>
+  <button class="btn btn-primary" (click)='onCreatePost()'>Créer un nouveau Post</button>
+</div>
